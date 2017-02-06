@@ -1,0 +1,13 @@
+for net update and produce 16M flash image.
+step0:
+    cp uboot        in
+    cp uImage       in
+    cp rootfs.sfs   in
+step1:
+    cd src
+    ./build.sh
+step2:
+    when net update use for out/uImage.out and out/rootfs.out to update
+    when programing 16M flash just use out/16Mboot.bin
+Note:
+    when local update dont use out/* just use origin file
